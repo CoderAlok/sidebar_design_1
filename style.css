@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+body{
+	font-family: 'Roboto', sans-serif;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;;
+	text-decoration: none;
+}
+
+.sidebar{
+	position: fixed;
+	left: -250px;
+	width: 250px;
+	height: 100%;
+	background: #042331;
+	transition: all .5s ease;
+}
+
+.sidebar header{
+	font-size: 22px;
+	color: white;
+	text-align: center;
+	line-height: 70px;
+	background: #063146;
+	user-select: none;
+}
+
+.sidebar ul a{
+	display: block;
+	height: 100%;
+	width: 100%;
+	line-height: 65px;
+	font-size: 20px;
+	color: white;
+	padding-left: 40px;
+	box-sizing: border-box;
+	border-top: 1px solid rgba(255, 255, 255, .1);
+	border-bottom: 1px solid black;
+}
+
+ul li:hover a{
+	padding-left: 50px;
+}
+
+.sidebar ul a i{
+	margin-right: 16px;
+}
+
+#check{
+	display: none;
+}
+
+label #btn, label #cancel{
+	position: absolute;
+	cursor: pointer;
+	background: #042331;
+	border-radius: 3px;
+}
+
+label #btn{
+	left: 40px;
+	top: 25px;
+	font-size: 35px;
+	color: white;
+	padding: 6px 12px;
+	transition: all .5s;
+}
+
+label #cancel{
+	z-index: 1111;
+	left: -195px;
+	top: 17px;
+	font-size: 30px;
+	color: #0a5275;
+	padding: 4px 9px;
+}
+
+#check:checked ~ .sidebar{
+	left: 0px;
+}
+
+#check:checked ~ label #btn{
+	left: 250px;
+	opacity: 0;
+	pointer-events: none;
+}
+
+#check:checked ~ label #cancel{
+	left: 195px;
+}
+
+#check:checked ~ section{
+	margin-left: 250px;
+}
+
+section{
+	background: url(bg.jpg) no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 100vh;
+	transition: all .5s;
+}
+
+section h1{
+	font-size: 60px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+	display: block;
+	color: white;
+	text-align: center;
+}
+
+section p{
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+	margin: 10px auto;
+	padding: 0px 150px;
+	text-align: justify;
+	color: #000000;
+	/*background: rgba(225, 159, 184, 0.5);*/
+	line-height: 25px;
+}
+
+/*section #home div */
+#home_container{
+	background: rgba(225, 195, 74, 0.6);
+	height: 100vh;
+}
+
+section div#home_container_overview{
+	background: rgba(152, 195, 74, 0.6);
+	height: 100vh;
+}
+
+section div#home_container_services{
+	background: rgba(152, 45, 74, 0.6);
+	height: 100vh;
+}
+
+section div#home_container_shortcut{
+	background: rgba(100, 45, 44, 0.6);
+	height: 100vh;
+}
+
+section div#home_container_about{
+	background: rgba(82, 145, 174, 0.6);
+	height: 100vh;
+}
+
+section div#home_container_contact{
+	background: rgba(82, 105, 140, 0.6);
+	height: 100vh;
+}
+
+section div#home_container_dashboard{
+	background: rgba(82, 1, 177, 0.6);
+	height: 100vh;
+}
+
+section div#home_container_events{
+	background: rgba(82, 166, 104, 0.6);
+	height: 100vh;
+}
+
+section div#home_container_home{
+	background: rgba(82, 148, 17, 0.6);
+	height: 100vh;
+}
